@@ -1,0 +1,8 @@
+<form>
+    A: <input type="number" [(ngModel)]="inputA">
+    B: <input type="number" [(ngModel)]="inputB">
+
+</form>
+<p>{{ inputA }} </p>
+<p>Az eredmény: {{result}} </p>
+<app-child [a]="inputA" [b]="inputB" (btnEvent)="resultHandler($event)"></app-child>
